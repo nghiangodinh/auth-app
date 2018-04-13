@@ -1,0 +1,47 @@
+<div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start">
+  <md-toolbar fxFlex="100%" color="primary">
+    <button md-button  md-icon-button >
+      <md-icon>delete</md-icon>
+    </button>
+  
+    <button md-button  md-icon-button  routerLink="create" routerLinkActive="active">
+      <md-icon>add</md-icon>
+    </button>
+      
+  </md-toolbar>
+  
+  <div fxFlex="100%">
+    <ngx-datatable
+      class="material"
+      [rows]="rows"
+      [columnMode]="'force'"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'"
+      [limit]="2"
+      [selected]="selected"
+      [selectionType]="'checkbox'"
+      (activate)="onActivate($event)"
+      (select)="onSelect($event)">
+      <ngx-datatable-column
+        [width]="30"
+        [sortable]="false"
+        [canAutoResize]="false"
+        [draggable]="false"
+        [resizeable]="false"
+        [headerCheckboxable]="true"
+        [checkboxable]="true">
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Name" prop="name"></ngx-datatable-column>
+      <ngx-datatable-column name="Allowed Origin" prop="allowedOrigin"></ngx-datatable-column>
+      <ngx-datatable-column name="Is Active" prop="active"></ngx-datatable-column>
+      <ngx-datatable-column name="">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+          <button class="mrgn-all-xs" md-raised-button md-icon-button md-button-sm routerLink="edit"><md-icon>edit</md-icon></button>
+          <button class="mrgn-all-xs" md-raised-button md-icon-button md-button-sm><md-icon>delete</md-icon></button>
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+</div>
+

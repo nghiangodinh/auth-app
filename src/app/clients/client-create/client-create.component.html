@@ -1,0 +1,51 @@
+<div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign=" start" class="gene-form-wizard">
+  <md-card fxFlex="100%">
+    <div class="gene-card-title">
+      <div fxLayout="row" fxLayoutAlign="start center">
+        <div fxLayout="column">
+          <h4>Form Validation</h4>
+        </div>
+        <span fxFlex></span>
+      </div>
+      <md-divider></md-divider>
+    </div>
+    <div class="gene-card-content">
+      <form [formGroup]="form">
+
+        <div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="space-between center">
+          <div fxFlex.gt-sm="49" fxFlex.gt-xs="49" fxFlex="100">
+            <md-input-container class="full-wid">
+              <input mdInput placeholder="Client Name" [formControl]="form.controls['name']">
+            </md-input-container>
+            <small class="gene-block" *ngIf="form.controls['name'].hasError('required') && form.controls['name'].touched" class="mat-text-warn">
+              You must include a Client name.
+            </small>
+            <small class="gene-block" *ngIf="form.controls['name'].hasError('minlength') && form.controls['name'].touched" class="mat-text-warn">
+              Your Client name must be at least 5 characters long.
+            </small>
+          </div>
+
+
+          <div fxFlex.gt-sm="49" fxFlex.gt-xs="49" fxFlex="100">
+            <md-input-container class="full-wid">
+              <input mdInput placeholder="Allowed origin" [formControl]="form.controls['allowedOrigin']" type="allowedOrigin">
+            </md-input-container>
+            <small class="gene-block" *ngIf="form.controls['allowedOrigin'].hasError('required') && form.controls['allowedOrigin'].touched" class="mat-text-warn">
+              You must include an Allowed origin.
+            </small>
+          </div>
+        </div>
+
+       
+
+
+        <div class="pad-wrap">
+          <md-card-actions>
+            <button md-raised-button color="accent">Cancel</button>
+            <button md-raised-button color="primary" type="submit" [disabled]="!form.valid">Save</button>
+          </md-card-actions>
+        </div>
+      </form>
+    </div>
+  </md-card>
+</div>
