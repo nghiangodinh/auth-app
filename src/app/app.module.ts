@@ -55,8 +55,12 @@ import { ClientListComponent } from "./clients/client-list/client-list.component
 import { ClientEditComponent } from "./clients/client-edit/client-edit.component";
 import { ClientCreateComponent } from "./clients/client-create/client-create.component";
 
-import { DataService, ClientDataService } from "./services";
-
+import {
+  DataService,
+  ActionDataService,
+  ClientDataService,
+  ControllerDataService
+} from "./services";
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, "assets/i18n", ".json");
@@ -128,7 +132,9 @@ const sortablejsConfig: SortablejsOptions = {
     PageTitleService,
     AuthService,
     AuthGuard,
+    ActionDataService,
     ClientDataService,
+    ControllerDataService,
     DataService
   ]
 })

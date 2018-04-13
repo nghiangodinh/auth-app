@@ -1,44 +1,96 @@
 {
-    "clients": [
-      {
-        "id": 1,
-        "secret": "86FEE8EC-A1D4-4A43-A946-B6CA970BBCD",
-        "name": "Logi Gear",
-        "applicationType": 1,
-        "active": true,
-        "accessTokenLifeTime": 1001,
-        "refreshTokenLifeTime": 1333,
-        "allowedOrigin": "Vietcombank"
-      },
-      {
-        "id": 2,
-        "secret": "86FEE8EC-A1D4-4A43-A946-B6CA970BBCD",
-        "name": "IT Solutions",
-        "applicationType": 2,
-        "active": true,
-        "accessTokenLifeTime": 1001,
-        "refreshTokenLifeTime": 1333,
-        "allowedOrigin": "Sacombank"
-      },
-      {
-        "id": 3,
-        "secret": "86FEE8EC-A1D4-4A43-A946-B6CA970BBCD",
-        "name": "TMA Solutions",
-        "applicationType": 3,
-        "active": true,
-        "accessTokenLifeTime": 1001,
-        "refreshTokenLifeTime": 1333,
-        "allowedOrigin": "VIP bank"
-      },
-      {
-        "id": 4,
-        "secret": "86FEE8EC-A1D4-4A43-A946-B6CA970BBCD",
-        "name": "CSC Vietnam",
-        "applicationType": 2,
-        "active": true,
-        "accessTokenLifeTime": 1003,
-        "refreshTokenLifeTime": 1323,
-        "allowedOrigin": "Exim Bank"
-      }
-    ]
-  }
+  "clients": [
+    {
+      "id": 1,
+      "secret": "86FEE8EC-A1D4-4A43-A946-B6CA970BBCD",
+      "name": "Logi Gear",
+      "applicationType": 1,
+      "active": true,
+      "accessTokenLifeTime": 1001,
+      "refreshTokenLifeTime": 1333,
+      "allowedOrigin": "Vietcombank"
+    },
+    {
+      "id": 2,
+      "secret": "86FEE8EC-A1D4-4A43-A946-B6CA970BBCD",
+      "name": "IT Solutions",
+      "applicationType": 2,
+      "active": true,
+      "accessTokenLifeTime": 1001,
+      "refreshTokenLifeTime": 1333,
+      "allowedOrigin": "Sacombank"
+    },
+    {
+      "id": 3,
+      "secret": "86FEE8EC-A1D4-4A43-A946-B6CA970BBCD",
+      "name": "TMA Solutions",
+      "applicationType": 3,
+      "active": true,
+      "accessTokenLifeTime": 1001,
+      "refreshTokenLifeTime": 1333,
+      "allowedOrigin": "VIP bank"
+    },
+    {
+      "id": 4,
+      "secret": "86FEE8EC-A1D4-4A43-A946-B6CA970BBCD",
+      "name": "CSC Vietnam",
+      "applicationType": 2,
+      "active": true,
+      "accessTokenLifeTime": 1003,
+      "refreshTokenLifeTime": 1323,
+      "allowedOrigin": "Exim Bank"
+    }
+  ],
+  "controllers": [
+    {
+      "id": 1,
+      "name": "Home"
+    },
+    {
+      "id": 2,
+      "name": "Account"
+    },
+    {
+      "id": 3,
+      "name": "Report"
+    },
+    {
+      "id": 4,
+      "name": "Client"
+    },
+    {
+      "id": 5,
+      "name": "User"
+    }
+  ],
+  "actions":[
+    {
+      "id": 1,
+      "controllerId": 1,
+      "actionName": "Index",
+      "actionDisplayName": "Home Page",
+      "showAsMenu": true
+    },
+    {
+      "id": 1,
+      "controllerId": 2,
+      "actionName": "Index",
+      "actionDisplayName": "Account page",
+      "showAsMenu": true
+    },
+    {
+      "id": 1,
+      "controllerId": 2,
+      "actionName": "Create",
+      "actionDisplayName": "Add new Account",
+      "showAsMenu": true
+    },
+    {
+      "id": 1,
+      "controllerId": 3,
+      "actionName": "Overview",
+      "actionDisplayName": "Overview Report",
+      "showAsMenu": true
+    }
+  ]
+}
